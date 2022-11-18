@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Toutes les listes</h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Créer une liste", new_list_path(@list) %>
+</div>

@@ -1,0 +1,10 @@
+<h1><%= @list.name %></h1>
+
+<% @list.movies.each do |movie| %>
+  <%= movie.title %>
+  <%= movie.overview %>
+  <%= movie.rating %>
+<% end %>
+
+<%= link_to "Add a bookmark", new_list_bookmark_path(@list) %>
+<%= link_to "Back Home", lists_path(@list) %>
